@@ -11,6 +11,12 @@ const config = {
     from: process.env.MAILER_FROM,
     options: {
       host: 'smtp.gmail.com',
+      port: 465,
+      pool: true,
+      tls: {
+        rejectUnauthorized: false
+      },
+      logger: false,
       service: process.env.MAILER_SERVICE_PROVIDER || 'Gmail',
       auth: {
         user: process.env.MAILER_EMAIL_ID,

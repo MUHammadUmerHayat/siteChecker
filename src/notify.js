@@ -1,6 +1,6 @@
-import Botkit from 'botkit';
-import rp from 'request-promise';
-import sendMail from './email';
+const Botkit = require('botkit');
+const rp = require('request-promise');
+const sendMail = require('./email');
 
 const config = require('../config');
 
@@ -31,9 +31,9 @@ const testUrl = (uri) => {
   return rp(options);
 };
 const URL = process.env.URL;
-const urls = URL ? URL.split(',') : ['https://fibre.com/units', 'https://staging.fibre.com', 'https://admin.fibre.com', 'https://fibrelifestyle.github.io/supply-FE/', 'https://secure.ng', 'https://koenigsys.com']
+const urls = URL ? URL.split(',') : ['https://staging.fibre.com', 'https://fibrelifestyle.github.io/supply-FE/']
 
-export default function siteChecker() {
+module.exports = function() {
   urls.map(function*(url) { yield testUrl(url) }).forEach((res) => {
     const site = [...res][0];
     site

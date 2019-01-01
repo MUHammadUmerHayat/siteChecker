@@ -1,9 +1,0 @@
-{
-  "apps" : [{
-    "name"        : "sitecheka",
-    "script"      : "./src/task.js",
-    "watch"       : true,
-    "exec_interpreter" : "babel-node",
-    "exec_mode"        : "fork",
-  }]
-}

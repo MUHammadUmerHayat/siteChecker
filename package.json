@@ -2,9 +2,8 @@
   "name": "notifier",
   "description": "notifier helps to detect down apis",
   "version": "1.0.0",
-  "main": "src/index.js",
   "scripts": {
-    "start": "babel-node ./src/task.js",
+    "start": "node server.js",
     "notify": "babel-node ./src/notify",
     "task": "babel-node ./src/task"
   },

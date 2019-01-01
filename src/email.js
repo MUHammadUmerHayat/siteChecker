@@ -1,10 +1,11 @@
-import hbs from 'nodemailer-express-handlebars';
-import handlebars from 'handlebars';
-import nodemailer from 'nodemailer';
+const hbs = require('nodemailer-express-handlebars');
+const handlebars = require('handlebars');
+const nodemailer = require('nodemailer');
 const config = require('../config');
 
-export default function sendMail(site) {
+module.exports = function(site) {
   const mailer = config('mailer');
+  console.log('mailer', mailer);
   const smtpTransport = nodemailer.createTransport(mailer.options);
 
   const handlebarsOptions = {

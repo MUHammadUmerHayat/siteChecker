@@ -1,5 +1,5 @@
-import cron from 'cron';
-import siteChecker from './notify';
+const cron = require('cron');
+const siteChecker = require('./notify');
 
 const CronJob = cron.CronJob;
 console.log('in the cron job task');
