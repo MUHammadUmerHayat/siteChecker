@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+const siteChecker = require('../src/notify');
+
+console.log('runJob');
+siteChecker();
